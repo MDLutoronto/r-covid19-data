@@ -1,13 +1,16 @@
 ---
 title: "COVID-19 data in R"
 layout: "home"
-description: ""
+staff:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+created_date: 2020-04-21
 permalink: "/"  #! Remove this if not the homepage
 ---
 
 # COVID-19 data in R
 
-This tutorial will teach you how to import, clean, explore and visualize public health Covid\-19 data using R.
+This tutorial will teach you how to import, clean, explore and visualize public health Covid-19 data using R.
 
 **TABLE OF CONTENTS**
 ---------------------
@@ -15,12 +18,12 @@ This tutorial will teach you how to import, clean, explore and visualize public 
 [Importing Data](#importingdata)  
 [Data Cleaning](#cleaningdata)  
 [Summary Statistics](#summarystatistics)  
-[Graphs \& Maps](#graphs)  
+[Graphs & Maps](#graphs)  
 [Model](#model)
 
 ### **Importing Data**
 
-You can download Covid\-19 data from the John Hopkins Github data. We download the confirmed cases dataset, the deaths dataset and the recovered cases dataset. Note differences in the number of rows and columns.
+You can download Covid-19 data from the John Hopkins Github data. We download the confirmed cases dataset, the deaths dataset and the recovered cases dataset. Note differences in the number of rows and columns.
 
 ```
 
@@ -61,7 +64,7 @@ country <- full_join(confirmed, deaths) %>% full_join(recovered)
 ```
  
 
-We fix the date variable. We create two new variables: the cumulative number of confirmed cases and the number of days variables. We create an aggregate country\-level dataset called world.
+We fix the date variable. We create two new variables: the cumulative number of confirmed cases and the number of days variables. We create an aggregate country-level dataset called world.
 
 ```
 
@@ -303,4 +306,4 @@ ggplot(data = worldmap) + geom_sf(aes(fill=cumconfirmed), color="black") +
 
  
 
-Tools: [R](/tools/r-0) \| Data Format: [Statistics](/data-format/statistics)**Date Created:** 2020\-04\-21**Updated:** 2022\-12\-20
+Tools: [R](/tools/r-0) | Data Format: [Statistics](/data-format/statistics)
