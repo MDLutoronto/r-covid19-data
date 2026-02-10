@@ -139,14 +139,13 @@ ggplot(aes(x=date, y=Cases, colour=Type)) + geom_bar(stat="identity", width=0.2,
 
 ![Covid-19 R Tutorial - 3]({{ '/assets/images/Covid-19%20R%20Tutorial%20-%203.png' | relative_url }})
 
-``` r
+```r
 # Line graph of confirmed cases over time - World
 ggplot(world, aes(x=days, y=confirmed)) + geom_line() +
   theme_classic() +
   labs(title = "Covid-19 Global Confirmed Cases", x= "Days", y= "Daily confirmed cases") +
   theme(plot.title = element_text(hjust = 0.5))
 # Ignore warning
-
 ```
 
 ![Covid-19 R Tutorial - 4]({{ '/assets/images/Covid-19%20R%20Tutorial%20-%204.png' | relative_url }})
@@ -160,7 +159,6 @@ ggplot(world, aes(x=days, y=confirmed)) + geom_line() +
   labs(title = "Covid-19 Global Confirmed Cases", x= "Days", y= "Daily confirmed cases  (log scale)") +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(trans="log10")
-
 ```
 ![Covid-19 R Tutorial - 5]({{ '/assets/images/Covid-10%20R%20Tutorial%20-%205.png' | relative_url }})
 
@@ -194,8 +192,7 @@ ggplot(countryselection, aes(x=days, y=confirmed, colour=Country.Region)) + geom
 
  
 
-``` r
-
+```r
 # Matrix of line graphs of confirmed, deaths and recovered for select countries in log10 scale
 str(countryselection)
 countryselection %>% select(-cumconfirmed) %>% gather("Type", "Cases", -c(date, days, Country.Region)) %>%
@@ -205,7 +202,6 @@ ggplot(aes(x=days, y=Cases, colour=Country.Region)) + geom_line(size=1) +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(trans="log10") +
   facet_grid(rows=vars(Type))
-
 ```
 
 ![Covid-19 cases plot]({{ "/assets/images/Covid-19%20R%20Tutorial%20-%208.png" | relative_url }})
@@ -248,12 +244,10 @@ countrytotal$Country.Region[!countrytotal$country %in% World$name]
 World$country <- World$name
 worldmap <- left_join(World, countrytotal, by="country")
 worldmap$cumconfirmed[is.na(worldmap$cumconfirmed)] <- 0
-
 ```
  
 
-``` r
-
+```r
 # Map
 ggplot(data = worldmap) + geom_sf(aes(fill=cumconfirmed), color="black") +
   ggtitle("World Map of Confirmed Covid Cases",
