@@ -4,6 +4,9 @@ layout: "home"
 staff:
     - name: Nadia Muhe
       link: https://library.utoronto.ca/staff/nadia-muhe
+maintainer:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 created_date: 2020-04-21
 permalink: "/"  #! Remove this if not the homepage
 ---
@@ -35,7 +38,7 @@ recoveredraw <- read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID
 ```
 
 ### **Data Cleaning**
-{: #data-cleaning }
+{: #data-cleaning}
 
 The next step is the data cleaning process. We want to create country level and global combined datasets with one row per country per date. To do this, we can to convert each dataset from wide format to long format and aggregate at the country level. The cleaned datasets are called confirmed, deaths and recovered. We also combine all three time series datasets into a new time series dataset called country.
 
@@ -83,7 +86,7 @@ italy <- country %>% filter(Country.Region=="Italy")
 ```
 
 ### **Summary Statistics**
-{: #summary-statistics }
+{: #summary-statistics}
 
 We can obtain useful summary statistics from our final cleaned datasets country and world using the summary function and using the by function with the summary function.
 
@@ -99,7 +102,7 @@ summary(italy)
 ```
 
 ### **Graphs and Maps**
-{: #graphs-maps }
+{: #graphs-maps}
 
 ```r
 # Load graphing package ggplot2
