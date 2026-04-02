@@ -22,7 +22,6 @@ This tutorial will teach you how to import, clean, explore and visualize public 
 [Data Cleaning](#data-cleaning)  
 [Summary Statistics](#summary-statistics)  
 [Graphs & Maps](#graphs-maps)  
-[Model]
 
 ### **Importing Data**
 {: #importing-data }
