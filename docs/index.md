@@ -257,12 +257,3 @@ ggplot(data = worldmap) + geom_sf(aes(fill=cumconfirmed), color="black") +
   theme_bw()
 ```
 ![Covid-19 R Tutorial - 9]({{ '/assets/images/Covid-19%20R%20Tutorial%20-%209.png' | relative_url }}) 
- 
-
- 
-
- 
-
- 
-
-Tools: [R](https://mdl.library.utoronto.ca/tools/r-0) | Data Format: [Statistics](https://mdl.library.utoronto.ca/data-format/statistics)
