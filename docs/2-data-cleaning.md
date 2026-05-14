@@ -2,6 +2,13 @@
 title: Data Cleaning
 parent: COVID-19 data in R
 layout: default
+staff:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+maintainer:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+created_date: 2020-04-21
 nav_order: 2
 ---
 
@@ -51,3 +58,5 @@ We can extract specific countries from the combined country dataset. We extract 
 # Extract specific country: Italy 
 italy <- country %>% filter(Country.Region=="Italy")
 ```
+
+**Tools:** [R](https://mdlutoronto.github.io/tutorials-search/?tool=R) \| **Data Format:** [Statistics](https://mdlutoronto.github.io/tutorials-search/?dataFormat=Statistics)

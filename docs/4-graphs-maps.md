@@ -2,6 +2,13 @@
 title: Graphs & Maps
 parent: COVID-19 data in R
 layout: default
+staff:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+maintainer:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+created_date: 2020-04-21
 nav_order: 4
 ---
 
@@ -161,3 +168,5 @@ ggplot(data = worldmap) + geom_sf(aes(fill=cumconfirmed), color="black") +
   theme_bw()
 ```
 ![Covid-19 R Tutorial - 9]({{ '/assets/images/Covid-19%20R%20Tutorial%20-%209.png' | relative_url }}) 
+
+**Tools:** [R](https://mdlutoronto.github.io/tutorials-search/?tool=R) \| **Data Format:** [Statistics](https://mdlutoronto.github.io/tutorials-search/?dataFormat=Statistics)

@@ -2,6 +2,13 @@
 title: Summary Statistics
 parent: COVID-19 data in R
 layout: default
+staff:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+maintainer:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+created_date: 2020-04-21
 nav_order: 3
 ---
 
@@ -20,3 +27,5 @@ by(country$recovered, country$Country.Region, summary)
 summary(world)
 summary(italy)
 ```
+
+**Tools:** [R](https://mdlutoronto.github.io/tutorials-search/?tool=R) \| **Data Format:** [Statistics](https://mdlutoronto.github.io/tutorials-search/?dataFormat=Statistics)
